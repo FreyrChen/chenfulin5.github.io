@@ -1,9 +1,136 @@
-extends _partial/layout
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="author" content="John Doe">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-block content
-    include _mixin/post
-    +homePost()
+  
+  <meta property="og:site_name" content="Hexo"/>
 
-block extra
-    include _components/project
-    include _components/selfintro
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Hexo</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-10-21T02:34:12.000Z"><a href="/2015/10/21/demo/">2015-10-21</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/10/21/demo/">辨析 Sass 中的 Map 和 List</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>如果你使用过 Sass 3.3 之前的版本，那么你一定对那段时光颇有感触，那时候没有现如今这么好的条件，那时候的 Map 还只能用多重列表（lists of list）来模拟。多重列表可以实现复杂数据的嵌套定义，但却不是以键值对的形式实现的，所有当我们需要获取其中特定的某一项时就会比较麻烦。Map 这种数据类型天生就是基于键值对的形式，非常便于组织数据。</p>
+<p>自从可以使用 Map 之后，开发者们开始毫无顾忌地定义 Map 存储数据，比如断点宽度、颜色值、栅格布局等等响应式排版的细节，都被一股脑的塞进了 Map 中。</p>
+<p>那么，有了 Map 之后，我们还有必要使用 List 吗？可能某些人会觉得为了保持向后兼容应该继续使用多重列表模拟 Map，因为可能有些开发者仍然在使用老版本的 Sass 编译器，但实际上，这是多此一举了，Sass 的版本通常由 <code>package.json</code> 或者其他同类型的项目配置文件所控制，往往只需一条命令（<code>gem update sass</code>）即可更新 Sass 的版本，因此基本上无需考虑对老版本的兼容问题。</p>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2015/10/21/demo/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+<nav id="pagination">
+  
+  
+  <div class="clearfix"></div>
+</nav></div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/css/">css</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2016 John Doe
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
